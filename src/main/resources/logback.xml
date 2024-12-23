@@ -24,7 +24,7 @@
     </appender>-->
 
     <!-- 用来控制查看那个类的日志内容（对mybatis name 代表命名空间） -->
-    <logger name="org.sc" level="DEBUG" additivity="false">
+    <logger name="org.sc.nettyheima" level="DEBUG" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
 
@@ -32,6 +32,9 @@
         <appender-ref ref="STDOUT"/>
     </logger>
 
+    <logger name="ch.qos.logback" level="WARn" additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
     <root level="ERROR">
         <appender-ref ref="STDOUT"/>
     </root>
