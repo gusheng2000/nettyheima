@@ -27,12 +27,7 @@ public class Server {
             ServerSocketChannel ssc = ServerSocketChannel.open();
             ssc.bind(new InetSocketAddress(8080));
             ssc.configureBlocking(false);
-
-
-
-
-
-
+            //3. 将ServerSocketChannel注册到selector上
             //SelectionKey 可以得到发生的事件类型和 对应的channel(ServerSocketChannel对象相关的SocketChannel和对应事件)
             SelectionKey sscKey = ssc.register(selector, 0, null);
             //4. 监听accept事件
